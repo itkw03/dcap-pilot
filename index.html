@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Financing Form</title>
+    <link rel="stylesheet" href="solar_financing.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="form-container">
+        <header>
+            <img src="Solar Financing.png" alt="Solar Financing Logo">
+        </header>
+        <form action="/submit-form" method="post">
+            <div class="tab">
+                <button type="button" class="tablinks active" onclick="openTab(event, 'customer-details')">Customer Details</button>
+                <button type="button" class="tablinks" onclick="openTab(event, 'employment')">Employment</button>
+                <button type="button" class="tablinks" onclick="openTab(event, 'references')">References</button>
+                <button type="button" class="tablinks" onclick="openTab(event, 'financing')">Financing</button>
+                <button type="button" class="tablinks" onclick="openTab(event, 'attachment')">Attachment</button>
+            </div>
+            <div id="customer-details" class="tabcontent">
+                <!-- Repeat this structure for each form field -->
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="name">Name: <span class="required-asterisk">*</span></label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" id="name" name="name">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="nric-no">NRIC No.:<span class="required-asterisk">*</span></label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" id="nric-no" name="nric-no" placeholder="Eg.: 888888-88-8888">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="mobile-number">Mobile Number: <span class="required-asterisk">*</span></label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" id="mobile-number" name="mobile-number" placeholder="Eg.: +60123456789">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="email-address">Email Address: <span class="required-asterisk">*</span></label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" id="email-address" name="email-address">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="gender">Gender: <span class="required-asterisk">*</span></label>
+                    </div>
+                    <div class="input-container">
+                        <select id="gender" name="gender">
+                        <option value="select-one">---Select One---</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="marital-status">Marital Status: <span class="required-asterisk">*</span></label>
+                    </div>
+                    <div class="input-container">
+                        <select id="marital-status" name="marital-status">
+                        <option value="select-one">---Select One---</option>
+                            <option value="single">Single</option>
+                            <option value="married">Married</option>
+                            <option value="divorced">Divorced</option>
+                            <option value="widowed">Widowed</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="race">Race: <span class="required-asterisk">*</span></label>
+                    </div>
+                    <div class="input-container">
+                        <select id="race" name="race">
+                        <option value="select-one">---Select One---</option>
+                            <option value="malay">Malay</option>
+                            <option value="indian">Indian</option>
+                            <option value="chinese">Chinese</option>
+                            <option value="others">Others</option>
+                        </select>
+                    </div>
+                </div>
+              
+
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="address-line-1">Address: <span class="required-asterisk">*</span></label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" id="address-line-1" name="address-line-1" placeholder="Address Line 1">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="address-line-2"></label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" id="address-line-2" name="address-line-2" placeholder="Address Line 2">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="city">City: <span class="required-asterisk">*</span></label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" id="city" name="city">
+                    </div>
+                </div>
+
+              
+              <div class="form-group">
+                    <div class="label-container">
+                        <label for="postcode">Postcode: <span class="required-asterisk">*</span></label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" id="postcode" name="postcode">
+                    </div>
+                </div>
+
+
+              <div class="form-group">
+                    <div class="label-container">
+                        <label for="state">State: <span class="required-asterisk">*</span></label>
+                    </div>
+                    <div class="input-container">
+                        <select id="state" name="state">
+                        <option value="select-one">---Select One---</option>
+                            <option value="johor">Johor</option>
+                            <option value="kedah">Kedah</option>
+                            <option value="kelantan">Kelantan</option>
+                            <option value="kuala_lumpur">Kuala Lumpur</option>
+                            <option value="labuan">Labuan</option>
+                            <option value="melaka">Melaka</option>
+                            <option value="negeri_sembilan">Negeri Sembilan</option>
+                            <option value="pahang">Pahang</option>
+                            <option value="perak">Perak</option>
+                            <option value="perlis">Perlis</option>
+                            <option value="pulau_pinang">Pulau Pinang</option>
+                            <option value="putrajaya">Putrajaya</option>
+                            <option value="sabah">Sabah</option>
+                            <option value="sarawak">Sarawak</option>
+                            <option value="selangor">Selangor</option>
+                            <option value="terengganu">Terengganu</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Buttons -->
+
+                <div class="button-container">
+                    <button type="submit" class="btn btn-primary" name="submit" id="save_button">Save</button>
+                    <button type="submit" class="btn btn-primary" name="submit" id="next_button">Next</button>
+                </div>
+            </div>
+            <!-- Other tabs' content would go here -->
+
+            <div id="employment" class="tabcontent">
+                <!-- Repeat this structure for each form field -->
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="occupation">Occupation: <span class="required-asterisk">*</span></label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" id="occupation" name="occupation">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="employment-length">Employment Length: <span class="required-asterisk">*</span></label>
+                    </div>
+                    <div class="input-container">
+                        <select id="employment-length" name="employment-length">
+                        <option value="select-one">---Select One---</option>
+                            <option value="less-than-1-year">Less than 1 year</option>
+                            <option value="between-1-and-3-years">Between 1 and 3 years</option>
+                            <option value="between-3-and-5-years">Between 3 and 5 years</option>
+                            <option value="more-than-5-years">More than 5 years</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="occupation-type">Occupation Type: <span class="required-asterisk">*</span></label>
+                    </div>
+                    <div class="input-container">
+                        <select id="occupation-type" name="occupation-type">
+                        <option value="select-one">---Select One---</option>
+                            <option value="gig">GIG (e.g. Grab / Food Panda / Lazada Express / Lalamove / J&T Rider)</option>
+                            <option value="police">Police / Army / Fire Fighter</option>
+                            <option value="government">Government Staff</option>
+                            <option value="driver">Driver (Lorry, Van, GDEX, Citylink, Personal)</option>
+                            <option value="security-guard">Security Guard</option>
+                            <option value="semi-skilled">Semi-Skilled (Factory, Construction & Technical Worker)</option>
+                            <option value="retail">Retail (e.g. Sales, F&B, Speed Mart, Fashion, Hotel, Travel)</option>
+                            <option value="office-worker">Office Workers / Admin / Clerk / HR</option>
+                            <option value="professional">Professional (e.g. Engineer, Banker, Healthcare, IT, Teacher)</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="employer-name">Employer Name: <span class="required-asterisk">*</span></label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" id="employer-name" name="employer-name">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="employer-number">Employer Telephone No: <span class="required-asterisk">*</span></label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" id="employer-number" name="employer-number" placeholder="Eg.: +60368888888">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="supervisor-number">Supervisor Telephone No: <span class="required-asterisk">*</span></label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" id="supervisor-number" name="supervisor-number" placeholder="Eg.: +60128888999">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="employer-address-line-1">Employer Address: <span class="required-asterisk">*</span></label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" id="employer-address-line-1" name="employer-address-line-1" placeholder="Employer Address Line 1">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="employer-address-line-2"></label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" id="employer-address-line-2" name="employer-address-line-2" placeholder="Employer Address Line 2">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="employer-city">City: <span class="required-asterisk">*</span></label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" id="employer-city" name="employer-city" placeholder="Employer City">
+                    </div>
+                </div>
+
+              
+              <div class="form-group">
+                    <div class="label-container">
+                        <label for="employer-postcode">Postcode: <span class="required-asterisk">*</span></label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" id="employer-postcode" name="employer-postcode" placeholder="Employer Postcode">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="employer-postcode">Postcode: <span class="required-asterisk">*</span></label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" id="employer-postcode" name="employer-postcode" placeholder="Employer Postcode">
+                    </div>
+                </div>
+
+
+              <div class="form-group">
+                    <div class="label-container">
+                        <label for="employer-state">State: <span class="required-asterisk">*</span></label>
+                    </div>
+                    <div class="input-container">
+                        <select id="employer-state" name="employer-state">
+                        <option value="">---Select One---</option>
+                            <option value="johor">Johor</option>
+                            <option value="kedah">Kedah</option>
+                            <option value="kelantan">Kelantan</option>
+                            <option value="kuala_lumpur">Kuala Lumpur</option>
+                            <option value="labuan">Labuan</option>
+                            <option value="melaka">Melaka</option>
+                            <option value="negeri_sembilan">Negeri Sembilan</option>
+                            <option value="pahang">Pahang</option>
+                            <option value="perak">Perak</option>
+                            <option value="perlis">Perlis</option>
+                            <option value="pulau_pinang">Pulau Pinang</option>
+                            <option value="putrajaya">Putrajaya</option>
+                            <option value="sabah">Sabah</option>
+                            <option value="sarawak">Sarawak</option>
+                            <option value="selangor">Selangor</option>
+                            <option value="terengganu">Terengganu</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="gross-income">Monthly Gross Income: <span class="required-asterisk">*</span></label>
+                    </div>
+                    <div class="input-container">
+                        <input type="number" id="gross-income" name="gross-income" placeholder="Monthly Gross Income" step="0.01">
+                    </div>
+                </div>
+
+
+
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="net-income">Monthly Net Income: <span class="required-asterisk">*</span></label>
+                    </div>
+                    <div class="input-container">
+                        <input type="number" id="net-income" name="net-income" placeholder="Monthly Gross Income" step="0.01">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="salary-bank">Salary Crediting Bank: <span class="required-asterisk">*</span></label>
+                    </div>
+                    <div class="input-container">
+                        <select id="salary-bank" name="salary-bank">
+                        <option value="">---Select One---</option>
+                            <option value="maybank">Maybank Banking Berhad (Maybank)</option>
+                            <option value="maybank-islamic">Maybank Islamic Berhad</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="salary-day">Salary Crediting Day: <span class="required-asterisk">*</span></label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" id="salary-day" name="salary-day" placeholder="Employer Postcode">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="salary-day">Salary Crediting Day: <span class="required-asterisk">*</span></label>
+                    </div>
+                    <div class="input-container">
+                        <select id="salary-day" name="salary-day">
+                        <option value="">---Select One---</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="epf">Customer with EPF?: <span class="required-asterisk">*</span></label>                        
+                    </div>
+                    <div class="input-container">
+                        <input type="radio" id = "yes" name="yesno" value="yes">
+                        <label for="yes">Yes</label>
+
+                        <input type="radio" id = "no" name="yesno" value="no">
+                        <label for="no">No</label>
+                        
+                    </div>
+                    
+                </div>
+
+
+                <!-- Buttons -->
+
+                <div class="button-container">
+                    <button type="submit" class="btn btn-primary" name="submit" id="save_button">Save</button>
+                    <button type="submit" class="btn btn-primary" name="submit" id="next_button">Next</button>
+                </div>
+            </div>
+
+
+            <!-- Other tabs' content would go here -->
+
+            <div id="references" class="tabcontent">
+                <!-- Repeat this structure for each form field -->
+                <h4>Reference 1</h4>
+                
+
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="ref-1-name">Name: <span class="required-asterisk">*</span></label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" id="ref-1-name" name="ref-1-name">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="ref-1-nric-no">NRIC No.: <span class="required-asterisk">*</span></label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" id="ref-1-nric-no" name="ref-1-nric-no" placeholder="Eg.: 888888-88-8888">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="ref-1-mobile-number">Mobile Number: <span class="required-asterisk">*</span></label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" id="ref-1-mobile-number" name="ref-1-mobile-number" placeholder="Eg.: +60123456789">
+                    </div>
+                </div>
+
+                
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="ref-1-relationship">Relationship: <span class="required-asterisk">*</span></label>
+                    </div>
+                    <div class="input-container">
+                        <select id="ref-1-relationship" name="ref-1-relationship">
+                        <option value="select-one">---Select One---</option>
+                            <option value="parents">Parents</option>
+                            <option value="spouse">Spouse</option>
+                            <option value="siblings">Siblings</option>
+                            <option value="child">Child</option>
+                            <option value="in-laws">In-laws</option>
+                            <option value="others">Others</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                
+                <!-- Reference 2 -->
+                <h4>Reference 2</h4>
+                
+
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="ref-2-name">Name: <span class="required-asterisk">*</span></label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" id="ref-2-name" name="ref-2-name">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="ref-2-nric-no">NRIC No.:</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" id="ref-2-nric-no" name="ref-2-nric-no" placeholder="Eg.: 888888-88-8888">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="ref-2-mobile-number">Mobile Number: <span class="required-asterisk">*</span></label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" id="ref-2-mobile-number" name="ref-2-mobile-number" placeholder="Eg.: +60123456789">
+                    </div>
+                </div>
+
+                
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="ref-2-relationship">Relationship: <span class="required-asterisk">*</span></label>
+                    </div>
+                    <div class="input-container">
+                        <select id="ref-2-relationship" name="ref-2-relationship">
+                        <option value="select-one">---Select One---</option>
+                            <option value="parents">Parents</option>
+                            <option value="spouse">Spouse</option>
+                            <option value="siblings">Siblings</option>
+                            <option value="child">Child</option>
+                            <option value="in-laws">In-laws</option>
+                            <option value="others">Others</option>
+                        </select>
+                    </div>
+                </div>                
+
+
+                <!-- Buttons -->
+
+                <div class="button-container">
+                    <button type="submit" class="btn btn-primary" name="submit" id="save_button">Save</button>
+                    <button type="submit" class="btn btn-primary" name="submit" id="next_button">Next</button>
+                </div>
+            </div>
+
+
+
+
+            <!-- Other tabs' content would go here -->
+            <div id="financing" class="tabcontent">
+
+                <h4>Product : Solar Panel Financing</h4>
+
+                <!-- Repeat this structure for each form field -->
+                
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="units">No. of Units: <span class="required-asterisk">*</span></label>
+                    </div>
+                    <div class="input-container">
+                        <select id="units" name="units">
+                        <option value="">---Select One---</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    
+                    <div class="label-container">
+                        <label for="total-price">Total Price:</label>
+                    </div>
+
+                    <div class="input-results">
+                        <input type="text" id="total-price" name="total-price" readonly>
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="deposit">Deposit: <span class="required-asterisk">*</span></label>
+                    </div>
+                    <div class="input-container">
+                        <input type="number" id="deposit" name="deposit" placeholder="At least 10%">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="tenure">Tenure: <span class="required-asterisk">*</span></label>
+                    </div>
+                    <div class="input-container">
+                        <select id="tenure" name="tenure">
+                        <option value="">---Select One---</option>
+                            <option value="12">12</option>
+                            <option value="24">24</option>
+                            <option value="36">36</option>
+                            <option value="48">48</option>
+                            <option value="60">60</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    
+                    <div class="label-container">
+                        <label for="financing-amount">Financing Amount:</label>
+                    </div>
+
+                    <div class="input-results">
+                        <input type="text" id="financing-amount" name="financing-amount" readonly>
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">            
+                    <div class="label-container">
+                        <label for="interest-rate">Interest Rate:</label>
+                    </div>
+                    <div class="input-results">
+                        <p>10%</p>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    
+                    <div class="label-container">
+                        <label for="balance-ori-payable">Balance Ori Payable:</label>
+                    </div>
+
+                    <div class="input-results">
+                        <input type="text" id="balance-ori-payable" name="balance-ori-payable" readonly>
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+                    
+                    <div class="label-container">
+                        <label for="monthly-instalment">Monthly Instalment:</label>
+                    </div>
+
+                    <div class="input-results">
+                        <input type="text" id="monthly-instalment" name="monthly-instalment" readonly>
+                    </div>
+
+                </div>
+
+
+                <!-- Buttons -->
+
+                <div class="button-container">
+                    <button type="submit" class="btn btn-primary" name="submit" id="save_button">Save</button>
+                    <button type="submit" class="btn btn-primary" name="submit" id="next_button">Next</button>
+                </div>
+            </div>
+
+
+            <!-- Other tabs' content would go here -->
+
+                <div id="attachment" class="tabcontent">
+                <h4>NRIC </h4>
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="nric-front">Front: <span class="required-asterisk">*</span></label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" id="nric-front-display" class="file-name-display" placeholder="Choose file" readonly>
+                        <label for="nric-front" class="custom-file-upload">Browse
+                            <input type="file" id="nric-front" name="nric-front" class="file-input" onchange="updateFileName('nric-front', 'nric-front-display')">
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="nric-back">Back:</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" id="nric-back-display" class="file-name-display" placeholder="Choose file" readonly>
+                        <label for="nric-back" class="custom-file-upload">Browse
+                            <input type="file" id="nric-back" name="nric-back" class="file-input" onchange="updateFileName('nric-back', 'nric-back-display')">
+                        </label>
+                    </div>
+                </div>
+
+                <h4>Income and Supporting Documents</h4>
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="income-doc">Income Document: <span class="required-asterisk">*</span></label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" id="income-doc-display" class="file-name-display" placeholder="Choose file" readonly>
+                        <label for="income-doc" class="custom-file-upload">Browse
+                            <input type="file" id="income-doc" name="income-doc" class="file-input" onchange="updateFileName('income-doc', 'income-doc-display')">
+                        </label>
+                    </div>
+                </div>
+
+                <div class="button-container">
+                    <button type="submit" class="btn btn-primary" name="submit" id="save_button">Save</button>
+                    <button type="submit" class="btn btn-primary" name="submit" id="next_button">Next</button>
+                </div>
+                
+                </div>
+                
+                <!-- Buttons -->
+
+                
+
+
+
+            </div>
+
+
+        </form>
+    </div>
+    <script src="solar_financing.js"></script>
+</body>
+</html>
+
+
+
+
+
+
